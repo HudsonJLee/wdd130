@@ -1,13 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
 #content {
     max-width: 1600px;
     margin: 0 auto;
-    font-family: Arial, sans-serif;
 }
 body {
     background-color: #fcfbfb;
+    font-family: Lato, Arial, sans-serif;
+    font-size: 22px;
     margin: 0;
     padding: 0;
     color: #333;
+}
+h2 {
+    margin: 0;
 }
 header {
     background-color: rgba(20, 30, 13, 0.7);
@@ -16,6 +22,9 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+#logo_link {
+    padding-top: 5px;
+}
 .logo {
     width: 120px;
     margin-left: 20px;
@@ -23,14 +32,13 @@ header {
 nav a {
     text-decoration: none;
     color: #fcfbfb;
-    margin: 0 15px;
     font-weight: bold;
+    text-align: center;
+    padding: 35px;
 }
 nav a:hover {
     background-color: black;
     color: #d9c2a3;
-    padding: 5px 10px;
-    border-radius: 5px;
 }
 #hero-img {
     width: 100%;
@@ -42,23 +50,25 @@ nav a:hover {
     text-align: center;
 }
 .home-title {
+    font-family: 'IM Fell French Canon', 'Georgia', serif;
     color: #002147;
-    font-size: 2.5em;
-    margin: 0.5em 0;
+    font-size: 2em;
+    margin-top: 10px;
 }
 #hero-msg h4 {
     color: #004080;
     margin-bottom: 1em;
 }
 .book, .join {
+    background-color: #d9c2a3;
+    color: black;
     text-decoration: none;
-    background-color: #0077cc;
-    color: white;
-    padding: 10px 25px;
+    font-size: 18px;
+    padding: 15px 30px;
+    margin-top: 50px;
     border-radius: 5px;
     display: inline-block;
     font-weight: bold;
-    margin: 10px 0;
 }
 .book:hover, .join:hover {
     background-color: #005fa3;
@@ -72,23 +82,37 @@ main section {
     width: 80px;
     display: block;
     margin: 10px auto;
+    padding-top: 10px;
+}
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+.card-img {
+    border: 10px solid #d9c2a3;
+}
+main section img {
+    box-sizing: border-box;
 }
 #background {
     height: 725px;
-    background-color: #d0e4f5; /* example light blue */
+    background-color: #d0e4f5;
 }
 .msg {
-    background-color: #f2f2f2;
-    padding: 40px 20px;
+    background-color: #6f7364;
+    padding: 35px;
     text-align: center;
+    line-height: 1.5em;
 }
 .msg h2 {
+    font-family: 'IM Fell French Canon', 'Georgia', serif;
     color: #002147;
 }
 .msg p {
     color: #333;
     max-width: 800px;
     margin: 0 auto 20px auto;
+    font-size: .8em;
+    padding-bottom: 15px;
 }
 .mountains {
     width: 100%;
@@ -99,7 +123,8 @@ footer {
     background-color: #002147;
     color: #fcfbfb;
     text-align: center;
-    padding: 20px 0;
+    padding: 25px 50px;
+    margin-top: 200px;
 }
 footer p {
     font-size: 1.2em;
@@ -116,4 +141,5 @@ footer .social img {
     width: 40px;
     margin: 0 5px;
     vertical-align: middle;
+    padding-top: 15px;
 }
