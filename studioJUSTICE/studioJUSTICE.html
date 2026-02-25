@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Studio Justice — Cinematic videography for music videos, documentaries, commercials, narrative films, and weddings.">
+  <meta property="og:title" content="Studio Justice">
+  <meta property="og:description" content="Visual storytelling studio crafting cinematic experiences across music, documentary, and narrative work.">
+  <meta property="og:image" content="images/studioJUSTICElogo-removebg-preview.png">
+  <title>Studio Justice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════ CURSOR ═══════════════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ═══════════════════════════ NAV ═══════════════════════════ -->
+  <nav class="nav" id="nav">
+    <a href="#hero" class="nav-logo">
+      <img src="images/studioJUSTICElogo-removebg-preview.png" alt="Studio Justice Logo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#work" class="nav-link">Work</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#services" class="nav-link">Services</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════ -->
+  <section class="hero" id="hero">
+    <video class="hero-video" autoplay loop muted playsinline poster="images/studioJUSTICElogo-removebg-preview.png">
+      <source src="images/JUSTICE (5).mp4" type="video/mp4">
+    </video>
+    <div class="hero-inner">
+      <p class="hero-eyebrow">Visual Storytelling Portfolio</p>
+      <p class="hero-tagline">By Hudson Lee<br></p>
+    </div>
+
+    <div class="hero-scroll">
+      <span class="hero-scroll-label">Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+
+    <div class="hero-sidebar">
+      <span class="hero-sidebar-text">Videography · Film · Photography</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ WORK ═══════════════════════════ -->
+  <section class="work" id="work">
+    <div class="section-header fade-in">
+      <span class="section-label">Selected Work</span>
+      <h2 class="section-title">Portfolio</h2>
+    </div>
+
+    <!-- Filter -->
+    <div class="filter fade-in" id="filter">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="music-video">Youtube</button>
+      <button class="filter-btn" data-filter="documentary">Documentary</button>
+      <button class="filter-btn" data-filter="commercial">Commercial</button>
+      <button class="filter-btn" data-filter="narrative">Narrative</button>
+      <button class="filter-btn" data-filter="wedding">Wedding</button>
+      <button class="filter-btn" data-filter="event">Event</button>
+    </div>
+
+    <!-- Asymmetric Grid -->
+    <div class="work-grid" id="workGrid">
+
+      <article class="project-card project-large fade-in" data-category="music-video" data-title="Echoes" data-year="2024" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+        <div class="project-thumb">
+          <div class="project-placeholder">
+            <svg class="play-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Music Video</span>
+          <h3 class="project-title">Echoes</h3>
+          <span class="project-year">2024</span>
+        </div>
+      </article>
+
+      <article class="project-card project-small fade-in" data-category="documentary" data-title="The Long Way Home" data-year="2024" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+        <div class="project-thumb">
+          <div class="project-placeholder">
+            <svg class="play-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Documentary</span>
+          <h3 class="project-title">The Long Way Home</h3>
+          <span class="project-year">2024</span>
+        </div>
+      </article>
+
+      <article class="project-card project-small fade-in" data-category="commercial" data-title="Velocity" data-year="2023" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+        <div class="project-thumb">
+          <div class="project-placeholder">
+            <svg class="play-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Commercial</span>
+          <h3 class="project-title">Velocity</h3>
+          <span class="project-year">2023</span>
+        </div>
+      </article>
+
+      <article class="project-card project-large fade-in" data-category="narrative" data-title="After Hours" data-year="2023" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+        <div class="project-thumb">
+          <div class="project-placeholder">
+            <svg class="play-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Narrative</span>
+          <h3 class="project-title">After Hours</h3>
+          <span class="project-year">2023</span>
+        </div>
+      </article>
+
+      <article class="project-card project-small fade-in" data-category="wedding" data-title="Sarah &amp; Marcus" data-year="2024" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+        <div class="project-thumb">
+          <div class="project-placeholder">
+            <svg class="play-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Wedding</span>
+          <h3 class="project-title">Sarah &amp; Marcus</h3>
+          <span class="project-year">2024</span>
+        </div>
+      </article>
+
+      <article class="project-card project-small fade-in" data-category="music-video" data-title="Bloom" data-year="2023" data-video="https://www.youtube.com/embed/dQw4w9WgXcQ">
+        <div class="project-thumb">
+          <div class="project-placeholder">
+            <svg class="play-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Youtube</span>
+          <h3 class="project-title">Bloom</h3>
+          <span class="project-year">2023</span>
+        </div>
+      </article>
+
+      <!-- Event Cards -->
+      <article class="project-card project-large fade-in" data-category="event" data-type="local-video" data-title="Event Footage 01" data-year="2026" data-video="images/events/MVI_3539.MP4">
+        <div class="project-thumb">
+          <div class="project-placeholder">
+            <svg class="play-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Event</span>
+          <h3 class="project-title">Event Footage 01</h3>
+          <span class="project-year">2026</span>
+        </div>
+      </article>
+
+      <article class="project-card project-small fade-in" data-category="event" data-type="photo" data-title="Event Photo 01" data-year="2026" data-photo="images/events/IMG_3662.JPG">
+        <div class="project-thumb">
+          <img src="images/events/IMG_3662.JPG" alt="Event Photo 01" class="project-thumb-img">
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <path d="M22 32h20M32 22l10 10-10 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Event</span>
+          <h3 class="project-title">Event Photo 01</h3>
+          <span class="project-year">2026</span>
+        </div>
+      </article>
+
+      <article class="project-card project-small fade-in" data-category="event" data-type="local-video" data-title="Event Footage 02" data-year="2026" data-video="images/events/MVI_3641.MP4">
+        <div class="project-thumb">
+          <div class="project-placeholder">
+            <svg class="play-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Event</span>
+          <h3 class="project-title">Event Footage 02</h3>
+          <span class="project-year">2026</span>
+        </div>
+      </article>
+
+      <article class="project-card project-large fade-in" data-category="event" data-type="photo" data-title="Event Photo 02" data-year="2026" data-photo="images/events/6C0F37C2-6CEA-4E51-8BC3-19ACF6577582.jpg">
+        <div class="project-thumb">
+          <img src="images/events/6C0F37C2-6CEA-4E51-8BC3-19ACF6577582.jpg" alt="Event Photo 02" class="project-thumb-img">
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <path d="M22 32h20M32 22l10 10-10 10" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Event</span>
+          <h3 class="project-title">Event Photo 02</h3>
+          <span class="project-year">2026</span>
+        </div>
+      </article>
+
+      <article class="project-card project-small fade-in" data-category="event" data-type="local-video" data-title="Event Footage 03" data-year="2026" data-video="images/events/MVI_3748.MP4">
+        <div class="project-thumb">
+          <div class="project-placeholder">
+            <svg class="play-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Event</span>
+          <h3 class="project-title">Event Footage 03</h3>
+          <span class="project-year">2026</span>
+        </div>
+      </article>
+
+      <article class="project-card project-large fade-in" data-category="event" data-type="local-video" data-title="Event Footage 04" data-year="2026" data-video="images/events/MVI_3861.MP4">
+        <div class="project-thumb">
+          <div class="project-placeholder">
+            <svg class="play-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Event</span>
+          <h3 class="project-title">Event Footage 04</h3>
+          <span class="project-year">2026</span>
+        </div>
+      </article>
+
+      <article class="project-card project-small fade-in" data-category="event" data-type="local-video" data-title="Event Coverage" data-year="2026" data-video="images/events/ScreenRecording_02-08-2026 11-38-31_1.mp4">
+        <div class="project-thumb">
+          <div class="project-placeholder">
+            <svg class="play-icon" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+          <div class="project-overlay">
+            <svg class="play-icon-hover" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="31" stroke="white" stroke-width="1.5"/>
+              <polygon points="27,20 48,32 27,44" fill="white"/>
+            </svg>
+          </div>
+        </div>
+        <div class="project-info">
+          <span class="project-category">Event</span>
+          <h3 class="project-title">Event Coverage</h3>
+          <span class="project-year">2026</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ LIGHTBOX ═══════════════════════════ -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Video player">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close video">
+      <span></span><span></span>
+    </button>
+    <div class="lightbox-content">
+      <div class="lightbox-meta" id="lightboxMeta"></div>
+      <div class="lightbox-video-wrap">
+        <iframe id="lightboxIframe" src="" title="Project video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <video id="lightboxVideo" src="" controls></video>
+        <img id="lightboxPhoto" src="" alt="Event photo">
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════ ABOUT ═══════════════════════════ -->
+  <section class="about" id="about">
+    <div class="about-inner">
+      <div class="about-text fade-in">
+        <span class="section-label">The Studio</span>
+        <h2 class="section-title">About</h2>
+        <p class="about-body">I’m Hudson Justice, 21, from Arizona. I’ve always been drawn to the way light bends across a room, the way a fleeting gesture can hold a universe of feeling. I chase those moments with a camera in hand, not just to capture them, but to let them breathe, linger, and speak to anyone who sees them.</p>
+        <p class="about-body">Studio Justice isn’t just a name, it’s my middle name, my compass, the lens through which I see the world. Every project I touch is a chance to honor the subtle, the overlooked, the quietly powerful. I believe in intention: every frame, every cut, every shadow and highlight is a choice, and those choices are how stories take shape and hearts move.</p>
+        <p class="about-body">My work is colored by my love for vintage Italian elegance, the careful artistry of designer brands, and the way old and new can collide to make something timeless. I’m drawn to composition that feels effortless but is carefully considered, to movement that whispers rather than shouts, to moments that hold both nostalgia and possibility.</p>
+        <p class="about-body">I collaborate with musicians, storytellers, and visionaries who refuse the ordinary, who see beauty in detail, emotion in nuance. From the first spark of an idea to the final frame, I obsess over light, movement, and feeling, aiming for work that lingers, resonates, and reminds people that imagery can be as alive as memory itself.</p>
+        <p class="about-body">At the end of the day, my work is me. My curiosity, my heart, my perspective. It’s an invitation: to pause, to feel, to remember that the world is made of moments worth holding.</p>
+      </div>
+      <div class="about-visual fade-in">
+        <div class="about-image-block">
+          <img class="about-image-placeholder" src="images/Untitled design (15).png" alt="Hudson Lee - Studio Justice">
+          <div class="about-image-accent"></div>
+        </div>
+      </div>
+    </div>
+    <div class="about-sidebar">
+      <span class="about-sidebar-text">Hudson Lee · Director · Cinematographer</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
+  <section class="services" id="services">
+    <div class="services-inner">
+      <div class="services-header fade-in">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title">Services</h2>
+      </div>
+      <div class="services-list">
+
+        <div class="service-item fade-in">
+          <div class="service-number">01</div>
+          <div class="service-body">
+            <h3 class="service-name">Music Video Production</h3>
+            <p class="service-desc">Narrative-driven visuals that amplify your sound and define your artistic identity.</p>
+          </div>
+          <div class="service-action">
+            <a href="#contact" class="service-link">Inquire</a>
+          </div>
+        </div>
+
+        <div class="service-item fade-in">
+          <div class="service-number">02</div>
+          <div class="service-body">
+            <h3 class="service-name">Documentary Filmmaking</h3>
+            <p class="service-desc">Long-form storytelling that captures truth with cinematic intentionality.</p>
+          </div>
+          <div class="service-action">
+            <a href="#contact" class="service-link">Inquire</a>
+          </div>
+        </div>
+
+        <div class="service-item fade-in">
+          <div class="service-number">03</div>
+          <div class="service-body">
+            <h3 class="service-name">Commercial &amp; Brand Content</h3>
+            <p class="service-desc">High-impact brand films and campaigns that convert and resonate.</p>
+          </div>
+          <div class="service-action">
+            <a href="#contact" class="service-link">Inquire</a>
+          </div>
+        </div>
+
+        <div class="service-item fade-in">
+          <div class="service-number">04</div>
+          <div class="service-body">
+            <h3 class="service-name">Narrative &amp; Short Film</h3>
+            <p class="service-desc">Character-led stories crafted with precision, tension, and visual poetry.</p>
+          </div>
+          <div class="service-action">
+            <a href="#contact" class="service-link">Inquire</a>
+          </div>
+        </div>
+
+        <div class="service-item fade-in">
+          <div class="service-number">05</div>
+          <div class="service-body">
+            <h3 class="service-name">Wedding Videography</h3>
+            <p class="service-desc">Timeless films that honor the depth of your most important moments.</p>
+          </div>
+          <div class="service-action">
+            <a href="#contact" class="service-link">Inquire</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ CONTACT ═══════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="contact-inner">
+      <div class="contact-cta fade-in">
+        <span class="section-label">Get In Touch</span>
+        <h2 class="contact-headline">Let's create<br><em>something</em><br>together.</h2>
+      </div>
+
+      <div class="contact-body">
+        <div class="contact-info fade-in">
+          <a href="mailto:hudsonjusticelee@gmail.com" class="contact-email"> hudsonjusticelee@gmail.com</a>
+          <p class="contact-location">Based in Pheonix, AZ · Available Worldwide</p>
+          </p>
+          <div class="contact-socials">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/hudsonleevideo/" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <circle cx="12" cy="12" r="4"/>
+                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+            <!-- Vimeo -->
+            <a href="#" class="social-link" aria-label="Vimeo">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 7.4c-.1 2.8-2 6.6-5.7 11.4C12.5 23.8 9.3 26 6.7 26c-1.6 0-2.9-1.4-4-4.3L.6 14c-.8-2.9-1.6-4.3-2.6-4.3-.2 0-1 .5-2.4 1.5L-5 9.6c1.5-1.3 3-2.7 4.5-4C1.8 3.8 3.5 3 4.6 2.9c2.7-.3 4.4 1.6 5 5.7.7 4.4 1.2 7.1 1.5 8.2.8 3.7 1.7 5.5 2.8 5.5.8 0 2-1.2 3.5-3.7 1.5-2.5 2.3-4.4 2.4-5.6.2-2.1-.6-3.2-2.4-3.2-.9 0-1.8.2-2.7.6 1.8-5.9 5.2-8.7 10.3-8.5 3.7.1 5.5 2.5 5.4 7.5z"/>
+              </svg>
+            </a>
+            <!-- YouTube -->
+            <a href="#" class="social-link" aria-label="YouTube">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.4 19.54C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/>
+                <polygon points="9.75,15.02 15.5,12 9.75,8.98 9.75,15.02" fill="currentColor" stroke="none"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <form class="contact-form fade-in" id="contactForm" novalidate>
+          <div class="form-row">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="project">Project Type</label>
+            <select id="project" name="project">
+              <option value="" disabled selected>Select a service</option>
+              <option value="music-video">Music Video Production</option>
+              <option value="documentary">Documentary Filmmaking</option>
+              <option value="commercial">Commercial / Brand Content</option>
+              <option value="narrative">Narrative / Short Film</option>
+              <option value="wedding">Wedding Videography</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" placeholder="Tell us about your project..."></textarea>
+          </div>
+          <button type="submit" class="form-submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ FOOTER ═══════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="images/studioJUSTICElogo-removebg-preview.png" alt="Studio Justice" class="footer-logo">
+      <p class="footer-copy">&copy; 2026 Studio Justice. All rights reserved.</p>
+      <p class="footer-credit">Visual Storytelling · Shot WorldWide</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
