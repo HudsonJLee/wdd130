@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Services — Studio Justice. Music video production, documentary filmmaking, commercial content, narrative film, and wedding videography in Arizona and worldwide.">
+  <title>Services — Studio Justice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── Page-specific overrides ── */
+    .page-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: flex-end;
+      padding: calc(var(--nav-h) + 6rem) clamp(1.5rem, 5vw, 4rem) 5rem;
+      background: var(--cream);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero-inner { position: relative; z-index: 1; max-width: 900px; }
+    .page-hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--charcoal);
+      margin-top: 0.5rem;
+    }
+    .page-hero-sub {
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      color: rgba(61,61,61,0.6);
+      margin-top: 1.5rem;
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    /* Service detail cards */
+    .services-detail {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
+      background: var(--white);
+    }
+    .services-detail-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .services-detail-inner > .section-label { margin-bottom: 0.5rem; }
+    .services-detail-inner > h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      margin-bottom: 4rem;
+    }
+
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2px;
+      background: var(--gray);
+    }
+    .service-card {
+      background: var(--white);
+      padding: clamp(2rem, 4vw, 3.5rem);
+      transition: background 0.3s;
+    }
+    .service-card:hover { background: var(--cream); }
+    .service-card-num {
+      font-family: var(--font-head);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      color: var(--gray-mid);
+      margin-bottom: 1.5rem;
+    }
+    .service-card-icon {
+      width: 40px;
+      height: 2px;
+      background: var(--charcoal);
+      margin-bottom: 1.5rem;
+      transition: width 0.4s;
+    }
+    .service-card:hover .service-card-icon { width: 70px; }
+    .service-card h3 {
+      font-family: var(--font-head);
+      font-size: clamp(1.1rem, 2vw, 1.4rem);
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 1rem;
+    }
+    .service-card p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--charcoal);
+      opacity: 0.7;
+      margin-bottom: 1.5rem;
+    }
+    .service-card-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 2rem;
+    }
+    .service-card-list li {
+      font-size: 0.8rem;
+      color: var(--gray-mid);
+      padding-left: 1rem;
+      position: relative;
+    }
+    .service-card-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--gray-mid);
+    }
+    .service-card-link {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      position: relative;
+      padding-bottom: 2px;
+    }
+    .service-card-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0;
+      width: 0; height: 1px;
+      background: var(--charcoal);
+      transition: width 0.3s;
+    }
+    .service-card-link:hover::after { width: 100%; }
+
+    /* Why Studio Justice */
+    .why-section {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
+      background: var(--charcoal);
+    }
+    .why-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .why-inner .section-label { color: rgba(245,243,239,0.4); }
+    .why-inner > h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--cream);
+      margin-bottom: 4rem;
+    }
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: clamp(2rem, 4vw, 4rem);
+    }
+    .why-item { }
+    .why-num {
+      font-family: var(--font-head);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      color: rgba(245,243,239,0.25);
+      margin-bottom: 1rem;
+    }
+    .why-title {
+      font-family: var(--font-head);
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 0.75rem;
+    }
+    .why-desc {
+      font-size: 0.85rem;
+      color: rgba(245,243,239,0.5);
+      line-height: 1.7;
+    }
+
+    /* Audience section */
+    .audience-section {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
+      background: var(--cream);
+    }
+    .audience-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 8rem);
+      align-items: start;
+    }
+    .audience-text .section-label { margin-bottom: 0.5rem; }
+    .audience-text h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      margin-bottom: 1.75rem;
+    }
+    .audience-text p {
+      font-size: clamp(0.9rem, 1.4vw, 1rem);
+      line-height: 1.8;
+      color: var(--charcoal);
+      opacity: 0.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .audience-image-wrap {
+      position: relative;
+      aspect-ratio: 3/4;
+      overflow: hidden;
+    }
+    .audience-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .audience-image-accent {
+      position: absolute;
+      top: -1.25rem;
+      left: -1.25rem;
+      width: 50%;
+      height: 50%;
+      border: 1.5px solid var(--gray);
+      z-index: -1;
+    }
+
+    /* FAQ */
+    .faq-section {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
+      background: var(--white);
+    }
+    .faq-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .faq-inner .section-label { margin-bottom: 0.5rem; }
+    .faq-inner > h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      margin-bottom: 3rem;
+    }
+    .faq-item {
+      border-top: 1px solid var(--gray);
+      padding: 1.75rem 0;
+    }
+    .faq-item:last-child { border-bottom: 1px solid var(--gray); }
+    .faq-q {
+      font-family: var(--font-head);
+      font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 0.75rem;
+    }
+    .faq-a {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--charcoal);
+      opacity: 0.7;
+    }
+
+    /* CTA */
+    .services-cta {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
+      background: var(--charcoal);
+      text-align: center;
+    }
+    .services-cta .section-label { color: rgba(245,243,239,0.4); text-align: center; }
+    .services-cta h2 {
+      font-family: var(--font-head);
+      font-size: clamp(2.5rem, 7vw, 6rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--cream);
+      margin: 0.5rem 0 2.5rem;
+    }
+    .services-cta h2 em {
+      font-style: italic;
+      font-weight: 300;
+      color: rgba(245,243,239,0.4);
+    }
+    .services-cta-links {
+      display: flex;
+      gap: 1.25rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-light {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      background: var(--cream);
+      padding: 1rem 2.5rem;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-light:hover { background: var(--white); transform: translateY(-2px); }
+    .btn-ghost {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--cream);
+      border: 1px solid rgba(245,243,239,0.3);
+      padding: 1rem 2.5rem;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .btn-ghost:hover { border-color: var(--cream); transform: translateY(-2px); }
+
+    @media (max-width: 1024px) {
+      .service-cards { grid-template-columns: 1fr; }
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .audience-inner { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 767px) {
+      .why-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="studioJUSTICE.html" class="nav-logo">
+      <img src="images/studioJUSTICElogo-removebg-preview.png" alt="Studio Justice Logo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="studioJUSTICE.html#work" class="nav-link">Work</a></li>
+      <li><a href="behind-the-scenes.html" class="nav-link">Behind the Scenes</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="studioJUSTICE.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner fade-in">
+      <span class="section-label">What We Offer</span>
+      <h1>Services</h1>
+      <p class="page-hero-sub">Cinematic production across every format — from intimate wedding films to large-scale commercial campaigns. Every project gets the same obsessive attention to craft.</p>
+    </div>
+  </section>
+
+  <!-- SERVICE CARDS -->
+  <section class="services-detail">
+    <div class="services-detail-inner">
+      <span class="section-label">Full Offerings</span>
+      <h2 class="fade-in">What Studio Justice Does</h2>
+      <div class="service-cards">
+
+        <div class="service-card fade-in">
+          <div class="service-card-num">01</div>
+          <div class="service-card-icon"></div>
+          <h3>Music Video Production</h3>
+          <p>I work directly with musicians and their creative teams to translate sound into image. Whether the concept is fully formed or just a feeling, I help develop a visual identity that serves the music and extends the artist's brand in a way that lives beyond the song itself.</p>
+          <ul class="service-card-list">
+            <li>Concept development and treatment writing</li>
+            <li>Location scouting and art direction</li>
+            <li>Full day (or multi-day) production</li>
+            <li>Color grading and sound mixing</li>
+            <li>YouTube and social media delivery formats</li>
+          </ul>
+          <a href="studioJUSTICE.html#contact" class="service-card-link">Start a Project →</a>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-card-num">02</div>
+          <div class="service-card-icon"></div>
+          <h3>Documentary Filmmaking</h3>
+          <p>Documentary is where I get to be most myself as a filmmaker. It demands patience, empathy, and the willingness to let reality lead. I approach every documentary project with deep respect for its subjects and a commitment to telling truth with craft — not just content, but cinema.</p>
+          <ul class="service-card-list">
+            <li>Subject research and interview preparation</li>
+            <li>Verité and structured interview production</li>
+            <li>Archival footage integration</li>
+            <li>Multi-camera event and performance coverage</li>
+            <li>Festival and broadcast mastering</li>
+          </ul>
+          <a href="studioJUSTICE.html#contact" class="service-card-link">Start a Project →</a>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-card-num">03</div>
+          <div class="service-card-icon"></div>
+          <h3>Commercial &amp; Brand Content</h3>
+          <p>Great brand film is great film, period. I don't make content that feels like an ad — I make films that happen to promote a product or brand. The best commercial work I've done is the kind that earns attention rather than interrupting for it. That's the standard I bring to every brand engagement.</p>
+          <ul class="service-card-list">
+            <li>Brand strategy alignment and creative brief</li>
+            <li>Product and lifestyle photography and video</li>
+            <li>Social media content packages (vertical + horizontal)</li>
+            <li>Brand film and long-form storytelling</li>
+            <li>Usage licensing and rights clearance</li>
+          </ul>
+          <a href="studioJUSTICE.html#contact" class="service-card-link">Start a Project →</a>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-card-num">04</div>
+          <div class="service-card-icon"></div>
+          <h3>Narrative &amp; Short Film</h3>
+          <p>For writers and directors who need a DP and producing partner, I bring the full cinematic toolkit: lens selection, lighting design, camera movement, and an understanding of how visual language supports performance and script. I love this work because every short film is a chance to experiment.</p>
+          <ul class="service-card-list">
+            <li>Script consultation and visual prep</li>
+            <li>Camera and lighting package design</li>
+            <li>Cinematography and co-production</li>
+            <li>Rough cut and picture lock editing</li>
+            <li>Film festival DCP mastering</li>
+          </ul>
+          <a href="studioJUSTICE.html#contact" class="service-card-link">Start a Project →</a>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-card-num">05</div>
+          <div class="service-card-icon"></div>
+          <h3>Wedding Videography</h3>
+          <p>Weddings are the most human thing I film. The stakes are the highest — there's no retake, no second chance. That responsibility sharpens everything. My wedding films aren't highlight reels set to trending music; they're short films about two people, told with cinematic intimacy and emotional precision.</p>
+          <ul class="service-card-list">
+            <li>Full-day coverage (ceremony + reception)</li>
+            <li>2-person crew for dual-angle capture</li>
+            <li>Ceremony audio via dedicated recorder</li>
+            <li>Feature film and highlight edit deliverables</li>
+            <li>Raw footage archive on hard drive</li>
+          </ul>
+          <a href="studioJUSTICE.html#contact" class="service-card-link">Start a Project →</a>
+        </div>
+
+        <div class="service-card fade-in">
+          <div class="service-card-num">06</div>
+          <div class="service-card-icon"></div>
+          <h3>Event Coverage</h3>
+          <p>From concerts and athletic competitions to corporate summits and cultural gatherings, I document events with the eye of a filmmaker, not just a camera operator. The goal is always the same: capture not just what happened, but what it felt like to be there.</p>
+          <ul class="service-card-list">
+            <li>Multi-camera event production</li>
+            <li>Same-day or next-day delivery options</li>
+            <li>Live streaming setup and management</li>
+            <li>Short recap and full-length edits</li>
+            <li>Photography coverage available on request</li>
+          </ul>
+          <a href="studioJUSTICE.html#contact" class="service-card-link">Start a Project →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY STUDIO JUSTICE -->
+  <section class="why-section">
+    <div class="why-inner">
+      <span class="section-label">Why Choose Studio Justice</span>
+      <h2 class="fade-in">The Difference</h2>
+      <div class="why-grid">
+        <div class="why-item fade-in">
+          <div class="why-num">01</div>
+          <div class="why-title">Intentional, Not Incidental</div>
+          <div class="why-desc">Every choice I make on set and in post is deliberate. Nothing is left to chance or default. If it's in the frame, it's there for a reason.</div>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-num">02</div>
+          <div class="why-title">Collaborative by Design</div>
+          <div class="why-desc">Your ideas don't disappear when you hand the project to me — they shape it. I work with clients, not just for them. Your vision is the foundation; I'm the builder.</div>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-num">03</div>
+          <div class="why-title">Cinema-Level Quality</div>
+          <div class="why-desc">Whether you're spending $500 or $5,000, you get the same cinematographic thinking. Budget determines scope. It never determines quality of intention.</div>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-num">04</div>
+          <div class="why-title">Clear Communication</div>
+          <div class="why-desc">I respond promptly, deliver detailed timelines, and never leave you wondering where your project stands. Professionalism isn't optional — it's the baseline.</div>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-num">05</div>
+          <div class="why-title">Post-Production Expertise</div>
+          <div class="why-desc">The edit is where films are truly made. I color grade in DaVinci Resolve, mix audio with intention, and deliver files mastered for every platform you need.</div>
+        </div>
+        <div class="why-item fade-in">
+          <div class="why-num">06</div>
+          <div class="why-title">Available Worldwide</div>
+          <div class="why-desc">Based in Phoenix, AZ — but I travel. If your project is worth making, geography isn't an obstacle. Let's talk about what's possible.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUDIENCE SECTION -->
+  <section class="audience-section">
+    <div class="audience-inner">
+      <div class="audience-text fade-in">
+        <span class="section-label">Who I Work With</span>
+        <h2>Made for Creators and Brands Who Refuse the Ordinary</h2>
+        <p>The clients who get the most out of working with Studio Justice are the ones who care deeply about their work — musicians building a visual identity, businesses that understand story is the most powerful form of marketing, couples who want a film that captures who they actually are rather than a generic wedding highlight reel.</p>
+        <p>I work best with people who come to me with strong opinions and genuine stakes in the outcome. You don't need to know film — I know film. But you need to know your vision. The clearer you are about what you want people to feel, the better the film will be.</p>
+        <p>My clients often find me through word of mouth, which is the best indicator I know that I'm doing something right. The Phoenix creative community has supported this studio from the beginning, and that trust is something I take seriously with every project I take on.</p>
+        <p>If you're a musician trying to compete in a visual landscape dominated by high-budget productions, a brand that needs more than generic stock-footage content, an event organizer who wants documentation worthy of the event itself, or a couple who refuses to settle for cookie-cutter wedding video — Studio Justice is built for you.</p>
+      </div>
+      <div class="audience-visual fade-in">
+        <div class="audience-image-wrap">
+          <img src="images/Untitled design (15).png" alt="Hudson Lee — Studio Justice director">
+        </div>
+        <div class="audience-image-accent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="faq-inner">
+      <span class="section-label">Common Questions</span>
+      <h2 class="fade-in">FAQ</h2>
+      <div class="faq-item fade-in">
+        <div class="faq-q">How far in advance should I book?</div>
+        <div class="faq-a">For weddings and larger productions, 3–6 months is ideal to ensure date availability and proper pre-production time. For commercial and music video work, 4–6 weeks is a good baseline, though I can sometimes accommodate faster turnarounds. Reach out as early as possible — popular dates fill quickly.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q">Do you travel for projects outside Arizona?</div>
+        <div class="faq-a">Absolutely. I've traveled extensively for productions and I'm comfortable working anywhere in the country and internationally. Travel costs are calculated based on the destination and project scope and are outlined clearly in the project proposal before any commitments are made.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q">How long does post-production take?</div>
+        <div class="faq-a">Turnaround depends on project complexity. Music videos typically take 2–4 weeks from wrap to delivery. Documentary projects vary widely based on length and interview volume. Weddings are typically 6–10 weeks. Rush delivery is available for an additional fee.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q">What file formats do you deliver?</div>
+        <div class="faq-a">Final deliverables are provided as H.264 or H.265 MP4 files optimized for the platforms you need — YouTube, Instagram (16:9 and 9:16), Vimeo, or broadcast. ProRes or raw deliveries are available for clients who need them for further post-production work.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q">Do you offer revisions?</div>
+        <div class="faq-a">Yes. Every project includes two rounds of revision on the edit. Additional revisions are billed at an hourly rate. Color grade revisions are included in the first revision round. I've found that clear communication during the brief and pre-production phase almost always means the first cut is very close to the final product.</div>
+      </div>
+      <div class="faq-item fade-in">
+        <div class="faq-q">Can I use Studio Justice content for commercial purposes?</div>
+        <div class="faq-a">Commercial usage rights are included in commercial and brand content packages. For personal projects like weddings or music videos, personal use rights are standard. If you need expanded licensing for broadcast, advertising, or third-party distribution, this is easily added to any contract and outlined before production begins.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="services-cta">
+    <span class="section-label fade-in">Ready to Begin</span>
+    <h2 class="fade-in">Let's make something<br><em>worth watching.</em></h2>
+    <div class="services-cta-links fade-in">
+      <a href="studioJUSTICE.html#contact" class="btn-light">Contact Hudson</a>
+      <a href="behind-the-scenes.html" class="btn-ghost">Behind the Scenes</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="images/studioJUSTICElogo-removebg-preview.png" alt="Studio Justice" class="footer-logo">
+      <p class="footer-copy">&copy; 2026 Studio Justice. All rights reserved.</p>
+      <p class="footer-credit">Visual Storytelling · Shot WorldWide</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Behind the Scenes — Studio Justice. Discover the creative process, gear, and philosophy behind Hudson Lee's cinematic work.">
+  <title>Behind the Scenes — Studio Justice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* ── Page-specific overrides ── */
+    .page-hero {
+      min-height: 60vh;
+      display: flex;
+      align-items: flex-end;
+      padding: calc(var(--nav-h) + 6rem) clamp(1.5rem, 5vw, 4rem) 5rem;
+      background: var(--charcoal);
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 70% 40%, rgba(255,255,255,0.04) 0%, transparent 70%);
+    }
+    .page-hero-inner { position: relative; z-index: 1; max-width: 900px; }
+    .page-hero .section-label { color: rgba(245,243,239,0.4); }
+    .page-hero h1 {
+      font-family: var(--font-head);
+      font-size: clamp(3rem, 8vw, 7rem);
+      font-weight: 700;
+      letter-spacing: -0.04em;
+      line-height: 1;
+      color: var(--cream);
+      margin-top: 0.5rem;
+    }
+    .page-hero-sub {
+      font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+      color: rgba(245,243,239,0.5);
+      margin-top: 1.5rem;
+      max-width: 560px;
+      line-height: 1.7;
+    }
+
+    .bts-section {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
+    }
+    .bts-section:nth-child(odd) { background: var(--cream); }
+    .bts-section:nth-child(even) { background: var(--white); }
+
+    .bts-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .bts-grid.reversed { }
+    .bts-grid.reversed .bts-text { order: 2; }
+    .bts-grid.reversed .bts-visual { order: 1; }
+
+    .bts-text .section-label { margin-bottom: 0.5rem; }
+    .bts-text h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      margin-bottom: 1.75rem;
+      line-height: 1.1;
+    }
+    .bts-text p {
+      font-size: clamp(0.95rem, 1.4vw, 1.05rem);
+      line-height: 1.8;
+      color: var(--charcoal);
+      opacity: 0.82;
+      margin-bottom: 1.25rem;
+    }
+    .bts-text p:last-of-type { margin-bottom: 0; }
+
+    .bts-visual {
+      position: relative;
+    }
+    .bts-image-wrap {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+    }
+    .bts-image-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .bts-image-accent {
+      position: absolute;
+      bottom: -1.25rem;
+      right: -1.25rem;
+      width: 50%;
+      height: 50%;
+      border: 1.5px solid var(--gray);
+      z-index: -1;
+    }
+
+    /* Gear list */
+    .gear-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .gear-grid h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--charcoal);
+      margin-bottom: 3rem;
+      line-height: 1.1;
+    }
+    .gear-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--gray);
+    }
+    .gear-item {
+      padding: 2rem 1.5rem 2rem 0;
+      border-bottom: 1px solid var(--gray);
+    }
+    .gear-item:nth-child(3n+2),
+    .gear-item:nth-child(3n+3) {
+      padding-left: 1.5rem;
+      border-left: 1px solid var(--gray);
+    }
+    .gear-category {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gray-mid);
+      margin-bottom: 0.4rem;
+    }
+    .gear-name {
+      font-family: var(--font-head);
+      font-size: clamp(0.9rem, 1.5vw, 1.05rem);
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 0.25rem;
+    }
+    .gear-desc {
+      font-size: 0.82rem;
+      color: var(--gray-mid);
+      line-height: 1.5;
+    }
+
+    /* Process steps */
+    .process-section {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
+      background: var(--charcoal);
+    }
+    .process-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .process-inner .section-label { color: rgba(245,243,239,0.4); }
+    .process-inner h2 {
+      font-family: var(--font-head);
+      font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--cream);
+      margin-bottom: 4rem;
+    }
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2.5rem;
+    }
+    .process-step { }
+    .step-number {
+      font-family: var(--font-head);
+      font-size: 3rem;
+      font-weight: 700;
+      color: rgba(245,243,239,0.08);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+    .step-title {
+      font-family: var(--font-head);
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--cream);
+      margin-bottom: 0.75rem;
+    }
+    .step-desc {
+      font-size: 0.85rem;
+      color: rgba(245,243,239,0.5);
+      line-height: 1.6;
+    }
+
+    /* CTA strip */
+    .bts-cta {
+      padding: clamp(5rem, 10vw, 9rem) clamp(1.5rem, 5vw, 4rem);
+      background: var(--cream);
+      text-align: center;
+    }
+    .bts-cta h2 {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 5vw, 4rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--charcoal);
+      margin-bottom: 2rem;
+    }
+    .bts-cta-links {
+      display: flex;
+      gap: 1.25rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--cream);
+      background: var(--charcoal);
+      padding: 1rem 2.5rem;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-primary:hover { background: var(--black); transform: translateY(-2px); }
+    .btn-secondary {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--charcoal);
+      border: 1px solid var(--charcoal);
+      padding: 1rem 2.5rem;
+      transition: background 0.25s, color 0.25s, transform 0.25s;
+    }
+    .btn-secondary:hover { background: var(--charcoal); color: var(--cream); transform: translateY(-2px); }
+
+    @media (max-width: 1024px) {
+      .bts-grid { grid-template-columns: 1fr; }
+      .bts-grid.reversed .bts-text,
+      .bts-grid.reversed .bts-visual { order: unset; }
+      .process-steps { grid-template-columns: repeat(2, 1fr); }
+      .gear-list { grid-template-columns: repeat(2, 1fr); }
+      .gear-item:nth-child(3n+2) { border-left: none; padding-left: 0; }
+      .gear-item:nth-child(3n+3) { border-left: none; padding-left: 0; }
+      .gear-item:nth-child(even) { padding-left: 1.5rem; border-left: 1px solid var(--gray); }
+    }
+    @media (max-width: 767px) {
+      .process-steps { grid-template-columns: 1fr; }
+      .gear-list { grid-template-columns: 1fr; }
+      .gear-item:nth-child(even) { border-left: none; padding-left: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- CURSOR -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="studioJUSTICE.html" class="nav-logo">
+      <img src="images/studioJUSTICElogo-removebg-preview.png" alt="Studio Justice Logo">
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="studioJUSTICE.html#work" class="nav-link">Work</a></li>
+      <li><a href="behind-the-scenes.html" class="nav-link">Behind the Scenes</a></li>
+      <li><a href="services.html" class="nav-link">Services</a></li>
+      <li><a href="studioJUSTICE.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="page-hero-inner fade-in">
+      <span class="section-label">Process &amp; Craft</span>
+      <h1>Behind<br>the Scenes</h1>
+      <p class="page-hero-sub">Every frame you see on screen is the result of hours of intention — scouting, planning, lighting, and obsessing over the details that most people never notice.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 1: THE CREATIVE PROCESS -->
+  <section class="bts-section">
+    <div class="bts-grid fade-in">
+      <div class="bts-text">
+        <span class="section-label">Where It Begins</span>
+        <h2>The Creative Process</h2>
+        <p>Every project at Studio Justice starts with a conversation — not about cameras or shot lists, but about feeling. I want to know what a client wants people to feel when they watch the final film. That emotional core becomes the compass for every decision that follows, from location choices to color grades to the rhythm of the edit.</p>
+        <p>Before a single frame is captured, I spend significant time in pre-production: building mood boards, scouting locations, studying the light at different times of day, and writing out detailed shot lists that balance spontaneity with intentionality. I believe you can only improvise brilliantly when you know exactly what you're after.</p>
+        <p>This preparation isn't just about efficiency on set — it's about creating space for magic. When the technical scaffolding is locked in, I'm free to be present, to notice the unexpected and lean into it. The best moments in any film I've ever shot weren't planned. They were earned by being prepared enough to recognize them when they happened.</p>
+      </div>
+      <div class="bts-visual">
+        <div class="bts-image-wrap">
+          <img src="images/events/IMG_3662.JPG" alt="Studio Justice on location">
+        </div>
+        <div class="bts-image-accent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 2: PHILOSOPHY -->
+  <section class="bts-section">
+    <div class="bts-grid reversed fade-in">
+      <div class="bts-text">
+        <span class="section-label">Vision &amp; Philosophy</span>
+        <h2>Light, Movement, and Feeling</h2>
+        <p>I've always been drawn to films that are more felt than watched. Cinema at its best bypasses the analytical mind and speaks directly to something deeper — a memory, a longing, a sense of recognition. That's the standard I hold my own work to. Not "did it look good?" but "did it move someone?"</p>
+        <p>My visual language is shaped by a love of Italian cinema — the patience of the long take, the confidence of negative space, the way great directors let silence do the heavy lifting. I apply those principles whether I'm shooting a three-minute music video or a feature-length documentary. Scale changes, but intention doesn't.</p>
+        <p>Color plays an enormous role in how I see storytelling. I spend as much time in the color suite as I do on set because a grade isn't just a stylistic finish — it's an emotional layer. Warm amber shadows can make a scene feel like memory; desaturated blues can make vulnerability feel clinical. Every palette I choose is a choice about how the viewer will inhabit the story.</p>
+        <p>The work I'm proudest of doesn't announce itself. It draws you in quietly, holds you, and leaves you with something you can't quite name but know you needed. That's the target. Every project is a chance to get a little closer to it.</p>
+      </div>
+      <div class="bts-visual">
+        <div class="bts-image-wrap">
+          <img src="images/events/6C0F37C2-6CEA-4E51-8BC3-19ACF6577582.jpg" alt="Hudson Lee on set">
+        </div>
+        <div class="bts-image-accent"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GEAR SECTION -->
+  <section class="bts-section">
+    <div class="gear-grid fade-in">
+      <span class="section-label">The Kit</span>
+      <h2>Gear &amp; Equipment</h2>
+      <div class="gear-list">
+        <div class="gear-item">
+          <div class="gear-category">Camera</div>
+          <div class="gear-name">Sony FX3</div>
+          <div class="gear-desc">Full-frame cinema sensor. Exceptional dynamic range and low-light performance for run-and-gun and studio work alike.</div>
+        </div>
+        <div class="gear-item">
+          <div class="gear-category">Camera</div>
+          <div class="gear-name">Sony A7S III</div>
+          <div class="gear-desc">Second body used for multi-camera setups, B-roll, and situations demanding extreme low-light capability.</div>
+        </div>
+        <div class="gear-item">
+          <div class="gear-category">Lenses</div>
+          <div class="gear-name">Sigma Art Series</div>
+          <div class="gear-desc">24mm, 35mm, and 85mm primes. The rendering is cinematic without sacrificing sharpness — a rare balance.</div>
+        </div>
+        <div class="gear-item">
+          <div class="gear-category">Stabilization</div>
+          <div class="gear-name">DJI RS 3 Pro Gimbal</div>
+          <div class="gear-desc">3-axis motorized stabilization for fluid motion work. Pairs with the FX3 for run-and-gun documentary style.</div>
+        </div>
+        <div class="gear-item">
+          <div class="gear-category">Lighting</div>
+          <div class="gear-name">Aputure 300X + 120D II</div>
+          <div class="gear-desc">Primary lighting setups for interviews and controlled environments. Tunable from warm to daylight balanced.</div>
+        </div>
+        <div class="gear-item">
+          <div class="gear-category">Audio</div>
+          <div class="gear-name">Rode NTG5 + Wireless GO II</div>
+          <div class="gear-desc">Shotgun for ambient and voiceover; wireless lavs for interviews and events where cables are impractical.</div>
+        </div>
+        <div class="gear-item">
+          <div class="gear-category">Drone</div>
+          <div class="gear-name">DJI Mini 4 Pro</div>
+          <div class="gear-desc">Compact aerial platform. Used selectively — aerial shots serve the story, not the other way around.</div>
+        </div>
+        <div class="gear-item">
+          <div class="gear-category">Post-Production</div>
+          <div class="gear-name">DaVinci Resolve Studio</div>
+          <div class="gear-desc">Full editing, color grading, and audio mixing in a single pipeline. The industry standard for good reason.</div>
+        </div>
+        <div class="gear-item">
+          <div class="gear-category">Post-Production</div>
+          <div class="gear-name">Adobe Creative Suite</div>
+          <div class="gear-desc">After Effects for motion graphics and VFX compositing; Photoshop and Lightroom for still work and thumbnails.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROCESS STEPS -->
+  <section class="process-section">
+    <div class="process-inner">
+      <span class="section-label">How We Work</span>
+      <h2 class="fade-in">From Idea to Final Cut</h2>
+      <div class="process-steps">
+        <div class="process-step fade-in">
+          <div class="step-number">01</div>
+          <div class="step-title">Discovery Call</div>
+          <div class="step-desc">We talk through your vision, timeline, and goals. I ask a lot of questions. The more I understand what you're after, the better the film will be.</div>
+        </div>
+        <div class="process-step fade-in">
+          <div class="step-number">02</div>
+          <div class="step-title">Pre-Production</div>
+          <div class="step-desc">Location scouting, mood boarding, shot list creation, call sheet preparation, and coordinating any talent, permits, or supporting crew needed.</div>
+        </div>
+        <div class="process-step fade-in">
+          <div class="step-number">03</div>
+          <div class="step-title">Production Day(s)</div>
+          <div class="step-desc">We shoot. I'm methodical but fluid — working the shot list while staying alert to the unexpected moments that often become the best ones.</div>
+        </div>
+        <div class="process-step fade-in">
+          <div class="step-number">04</div>
+          <div class="step-title">Edit &amp; Delivery</div>
+          <div class="step-desc">Offline edit, color grade, audio mix, and sound design. You receive a review cut, we refine, and then the final deliverable is yours — mastered for every platform.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bts-cta">
+    <h2 class="fade-in">Ready to start your project?</h2>
+    <div class="bts-cta-links fade-in">
+      <a href="studioJUSTICE.html#contact" class="btn-primary">Get in Touch</a>
+      <a href="services.html" class="btn-secondary">View Services</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="images/studioJUSTICElogo-removebg-preview.png" alt="Studio Justice" class="footer-logo">
+      <p class="footer-copy">&copy; 2026 Studio Justice. All rights reserved.</p>
+      <p class="footer-credit">Visual Storytelling · Shot WorldWide</p>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
