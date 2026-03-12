@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 2200" width="800" height="2200">
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+    .label { font-size: 11px; fill: #999; font-weight: 400; }
+    .heading { font-size: 14px; fill: #333; font-weight: 700; }
+    .small { font-size: 10px; fill: #aaa; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="2200" fill="#fff" rx="4"/>
+
+  <!-- ===== NAV ===== -->
+  <rect x="0" y="0" width="800" height="56" fill="#1a1a1a"/>
+  <rect x="24" y="16" width="80" height="24" rx="3" fill="#333" stroke="#555" stroke-width="0.5"/>
+  <text x="44" y="32" class="small" fill="#ccc">Logo</text>
+  <rect x="450" y="20" width="40" height="12" rx="2" fill="#444"/>
+  <rect x="510" y="20" width="40" height="12" rx="2" fill="#444"/>
+  <rect x="570" y="20" width="80" height="12" rx="2" fill="#444"/>
+  <rect x="670" y="20" width="50" height="12" rx="2" fill="#444"/>
+  <rect x="740" y="20" width="40" height="12" rx="2" fill="#444"/>
+
+  <!-- ===== HERO (full-screen video) ===== -->
+  <rect x="0" y="56" width="800" height="500" fill="#111"/>
+  <!-- Play icon center -->
+  <circle cx="400" cy="280" r="30" fill="none" stroke="#555" stroke-width="1.5"/>
+  <polygon points="390,265 418,280 390,295" fill="#555"/>
+  <text x="400" y="340" text-anchor="middle" class="label" fill="#666">Full-Screen Video Hero</text>
+  <!-- Hero text overlay -->
+  <text x="60" y="480" font-size="10" fill="#666" letter-spacing="3">VISUAL STORYTELLING PORTFOLIO</text>
+  <text x="60" y="510" font-size="22" fill="#ccc" font-weight="300">By Hudson Lee</text>
+  <!-- Scroll indicator -->
+  <text x="760" y="520" text-anchor="end" font-size="9" fill="#555">Scroll ↓</text>
+  <!-- Side label -->
+  <text x="20" y="320" font-size="8" fill="#444" transform="rotate(-90 20 320)">Videography · Film · Photography</text>
+
+  <!-- ===== SECTION: PORTFOLIO / WORK ===== -->
+  <rect x="0" y="556" width="800" height="680" fill="#fafafa"/>
+  <text x="60" y="600" font-size="10" fill="#bbb" letter-spacing="2">SELECTED WORK</text>
+  <text x="60" y="625" class="heading" font-size="20">Portfolio</text>
+
+  <!-- Filter bar -->
+  <rect x="60" y="645" width="36" height="18" rx="9" fill="#333"/>
+  <text x="68" y="658" font-size="8" fill="#fff">All</text>
+  <rect x="106" y="645" width="56" height="18" rx="9" fill="none" stroke="#ccc" stroke-width="0.7"/>
+  <text x="114" y="658" font-size="8" fill="#999">Youtube</text>
+  <rect x="172" y="645" width="72" height="18" rx="9" fill="none" stroke="#ccc" stroke-width="0.7"/>
+  <text x="180" y="658" font-size="8" fill="#999">Documentary</text>
+  <rect x="254" y="645" width="72" height="18" rx="9" fill="none" stroke="#ccc" stroke-width="0.7"/>
+  <text x="262" y="658" font-size="8" fill="#999">Commercial</text>
+  <rect x="336" y="645" width="60" height="18" rx="9" fill="none" stroke="#ccc" stroke-width="0.7"/>
+  <text x="344" y="658" font-size="8" fill="#999">Narrative</text>
+  <rect x="406" y="645" width="56" height="18" rx="9" fill="none" stroke="#ccc" stroke-width="0.7"/>
+  <text x="414" y="658" font-size="8" fill="#999">Wedding</text>
+  <rect x="472" y="645" width="46" height="18" rx="9" fill="none" stroke="#ccc" stroke-width="0.7"/>
+  <text x="480" y="658" font-size="8" fill="#999">Event</text>
+
+  <!-- Asymmetric project grid row 1 -->
+  <rect x="60" y="680" width="440" height="260" rx="4" fill="#ddd"/>
+  <text x="280" y="818" text-anchor="middle" class="label">Large Card — Music Video</text>
+  <rect x="520" y="680" width="220" height="125" rx="4" fill="#ddd"/>
+  <text x="630" y="748" text-anchor="middle" class="small">Small — Documentary</text>
+  <rect x="520" y="815" width="220" height="125" rx="4" fill="#ddd"/>
+  <text x="630" y="883" text-anchor="middle" class="small">Small — Commercial</text>
+
+  <!-- Asymmetric project grid row 2 -->
+  <rect x="60" y="955" width="220" height="125" rx="4" fill="#ddd"/>
+  <text x="170" y="1023" text-anchor="middle" class="small">Small — Wedding</text>
+  <rect x="300" y="955" width="220" height="125" rx="4" fill="#ddd"/>
+  <text x="410" y="1023" text-anchor="middle" class="small">Small — Youtube</text>
+  <rect x="540" y="955" width="200" height="260" rx="4" fill="#ddd"/>
+  <text x="640" y="1093" text-anchor="middle" class="label">Large — Event Video</text>
+
+  <!-- ===== SECTION: ABOUT ===== -->
+  <rect x="0" y="1236" width="800" height="380" fill="#f5f3ef"/>
+  <text x="60" y="1280" font-size="10" fill="#bbb" letter-spacing="2">ABOUT</text>
+  <text x="60" y="1310" class="heading" font-size="20">Hudson Lee</text>
+
+  <!-- Two-column: text left, image right -->
+  <rect x="60" y="1330" width="360" height="14" rx="2" fill="#ccc"/>
+  <rect x="60" y="1352" width="340" height="14" rx="2" fill="#ccc"/>
+  <rect x="60" y="1374" width="350" height="14" rx="2" fill="#ccc"/>
+  <rect x="60" y="1396" width="320" height="14" rx="2" fill="#ccc"/>
+  <rect x="60" y="1418" width="360" height="14" rx="2" fill="#ccc"/>
+  <rect x="60" y="1440" width="300" height="14" rx="2" fill="#ccc"/>
+  <rect x="60" y="1462" width="340" height="14" rx="2" fill="#ccc"/>
+  <rect x="60" y="1484" width="280" height="14" rx="2" fill="#ccc"/>
+
+  <!-- Portrait image -->
+  <rect x="490" y="1290" width="250" height="300" rx="4" fill="#ddd"/>
+  <text x="615" y="1445" text-anchor="middle" class="label">Portrait Image</text>
+
+  <!-- ===== SECTION: SERVICES LIST ===== -->
+  <rect x="0" y="1616" width="800" height="310" fill="#fff"/>
+  <text x="60" y="1660" font-size="10" fill="#bbb" letter-spacing="2">WHAT WE DO</text>
+  <text x="60" y="1688" class="heading" font-size="20">Services</text>
+
+  <!-- Numbered service rows -->
+  <line x1="60" y1="1710" x2="740" y2="1710" stroke="#eee" stroke-width="1"/>
+  <text x="60" y="1732" font-size="12" fill="#aaa">01</text>
+  <text x="100" y="1732" font-size="12" fill="#333" font-weight="600">Music Video Production</text>
+  <text x="700" y="1732" font-size="10" fill="#999">Inquire →</text>
+
+  <line x1="60" y1="1745" x2="740" y2="1745" stroke="#eee" stroke-width="1"/>
+  <text x="60" y="1767" font-size="12" fill="#aaa">02</text>
+  <text x="100" y="1767" font-size="12" fill="#333" font-weight="600">Documentary Filmmaking</text>
+  <text x="700" y="1767" font-size="10" fill="#999">Inquire →</text>
+
+  <line x1="60" y1="1780" x2="740" y2="1780" stroke="#eee" stroke-width="1"/>
+  <text x="60" y="1802" font-size="12" fill="#aaa">03</text>
+  <text x="100" y="1802" font-size="12" fill="#333" font-weight="600">Commercial &amp; Brand Content</text>
+  <text x="700" y="1802" font-size="10" fill="#999">Inquire →</text>
+
+  <line x1="60" y1="1815" x2="740" y2="1815" stroke="#eee" stroke-width="1"/>
+  <text x="60" y="1837" font-size="12" fill="#aaa">04</text>
+  <text x="100" y="1837" font-size="12" fill="#333" font-weight="600">Narrative &amp; Short Film</text>
+  <text x="700" y="1837" font-size="10" fill="#999">Inquire →</text>
+
+  <line x1="60" y1="1850" x2="740" y2="1850" stroke="#eee" stroke-width="1"/>
+  <text x="60" y="1872" font-size="12" fill="#aaa">05</text>
+  <text x="100" y="1872" font-size="12" fill="#333" font-weight="600">Wedding Videography</text>
+  <text x="700" y="1872" font-size="10" fill="#999">Inquire →</text>
+  <line x1="60" y1="1885" x2="740" y2="1885" stroke="#eee" stroke-width="1"/>
+
+  <!-- ===== SECTION: CONTACT ===== -->
+  <rect x="0" y="1926" width="800" height="220" fill="#1a1a1a"/>
+  <text x="60" y="1960" font-size="10" fill="#555" letter-spacing="2">GET IN TOUCH</text>
+  <text x="60" y="1995" font-size="24" fill="#f5f3ef" font-weight="300" font-style="italic">Let's create something together.</text>
+
+  <!-- Contact info left -->
+  <rect x="60" y="2020" width="160" height="10" rx="2" fill="#333"/>
+  <text x="60" y="2050" font-size="9" fill="#555">Phoenix, AZ · Available Worldwide</text>
+  <!-- Social icons -->
+  <circle cx="70" cy="2075" r="10" fill="none" stroke="#444" stroke-width="0.8"/>
+  <circle cx="100" cy="2075" r="10" fill="none" stroke="#444" stroke-width="0.8"/>
+  <circle cx="130" cy="2075" r="10" fill="none" stroke="#444" stroke-width="0.8"/>
+
+  <!-- Contact form right -->
+  <rect x="420" y="2000" width="150" height="24" rx="3" fill="#2a2a2a" stroke="#333" stroke-width="0.5"/>
+  <text x="430" y="2016" font-size="8" fill="#666">Name</text>
+  <rect x="580" y="2000" width="150" height="24" rx="3" fill="#2a2a2a" stroke="#333" stroke-width="0.5"/>
+  <text x="590" y="2016" font-size="8" fill="#666">Email</text>
+  <rect x="420" y="2032" width="310" height="24" rx="3" fill="#2a2a2a" stroke="#333" stroke-width="0.5"/>
+  <text x="430" y="2048" font-size="8" fill="#666">Project Type</text>
+  <rect x="420" y="2064" width="310" height="48" rx="3" fill="#2a2a2a" stroke="#333" stroke-width="0.5"/>
+  <text x="430" y="2084" font-size="8" fill="#666">Message</text>
+  <rect x="420" y="2120" width="100" height="26" rx="3" fill="#f5f3ef"/>
+  <text x="445" y="2137" font-size="9" fill="#1a1a1a" font-weight="600">Send Message</text>
+
+  <!-- ===== FOOTER ===== -->
+  <rect x="0" y="2146" width="800" height="54" fill="#111"/>
+  <rect x="340" y="2156" width="120" height="14" rx="2" fill="#222"/>
+  <text x="400" y="2190" text-anchor="middle" font-size="8" fill="#444">© 2026 Studio Justice. All rights reserved.</text>
+</svg>

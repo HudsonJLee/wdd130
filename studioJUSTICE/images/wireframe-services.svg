@@ -1,0 +1,197 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 2400" width="800" height="2400">
+  <style>
+    text { font-family: Arial, Helvetica, sans-serif; }
+    .label { font-size: 11px; fill: #999; font-weight: 400; }
+    .heading { font-size: 14px; fill: #333; font-weight: 700; }
+    .small { font-size: 10px; fill: #aaa; }
+  </style>
+
+  <!-- Background -->
+  <rect width="800" height="2400" fill="#fff" rx="4"/>
+
+  <!-- ===== NAV ===== -->
+  <rect x="0" y="0" width="800" height="56" fill="#1a1a1a"/>
+  <rect x="24" y="16" width="80" height="24" rx="3" fill="#333" stroke="#555" stroke-width="0.5"/>
+  <text x="44" y="32" class="small" fill="#ccc">Logo</text>
+  <rect x="450" y="20" width="40" height="12" rx="2" fill="#444"/>
+  <rect x="510" y="20" width="40" height="12" rx="2" fill="#444"/>
+  <rect x="570" y="20" width="80" height="12" rx="2" fill="#444"/>
+  <rect x="670" y="20" width="50" height="12" rx="2" fill="#444"/>
+  <rect x="740" y="20" width="40" height="12" rx="2" fill="#444"/>
+
+  <!-- ===== HERO (cream background) ===== -->
+  <rect x="0" y="56" width="800" height="340" fill="#f5f3ef"/>
+  <text x="60" y="280" font-size="10" fill="#bbb" letter-spacing="2">SERVICES</text>
+  <text x="60" y="330" font-size="48" fill="#333" font-weight="700" letter-spacing="-2">Services</text>
+  <rect x="60" y="348" width="400" height="12" rx="2" fill="#ccc"/>
+  <text x="60" y="358" class="small" fill="transparent">Subtitle text</text>
+
+  <!-- ===== SERVICE DETAIL CARDS (2-column grid) ===== -->
+  <rect x="0" y="396" width="800" height="720" fill="#fff"/>
+  <text x="60" y="430" font-size="10" fill="#bbb" letter-spacing="2">WHAT WE OFFER</text>
+  <text x="60" y="458" class="heading" font-size="20">Full Service Offerings</text>
+
+  <!-- 2x3 grid of service cards -->
+  <!-- Row 1 -->
+  <rect x="60" y="485" width="330" height="210" rx="4" fill="#fafafa" stroke="#eee" stroke-width="1"/>
+  <text x="80" y="508" font-size="9" fill="#aaa" letter-spacing="2">01</text>
+  <rect x="80" y="518" width="40" height="2" fill="#333"/>
+  <text x="80" y="548" font-size="13" fill="#333" font-weight="600">Music Video Production</text>
+  <rect x="80" y="560" width="280" height="10" rx="2" fill="#ddd"/>
+  <rect x="80" y="576" width="260" height="10" rx="2" fill="#ddd"/>
+  <text x="80" y="610" font-size="8" fill="#aaa">— Concept development</text>
+  <text x="80" y="624" font-size="8" fill="#aaa">— Full production &amp; direction</text>
+  <text x="80" y="638" font-size="8" fill="#aaa">— Color grade &amp; delivery</text>
+  <text x="80" y="672" font-size="9" fill="#333" font-weight="500">Start a Project →</text>
+
+  <rect x="410" y="485" width="330" height="210" rx="4" fill="#fafafa" stroke="#eee" stroke-width="1"/>
+  <text x="430" y="508" font-size="9" fill="#aaa" letter-spacing="2">02</text>
+  <rect x="430" y="518" width="40" height="2" fill="#333"/>
+  <text x="430" y="548" font-size="13" fill="#333" font-weight="600">Documentary Filmmaking</text>
+  <rect x="430" y="560" width="280" height="10" rx="2" fill="#ddd"/>
+  <rect x="430" y="576" width="260" height="10" rx="2" fill="#ddd"/>
+  <text x="430" y="610" font-size="8" fill="#aaa">— Story development</text>
+  <text x="430" y="624" font-size="8" fill="#aaa">— Interview &amp; vérité capture</text>
+  <text x="430" y="638" font-size="8" fill="#aaa">— Broadcast master</text>
+  <text x="430" y="672" font-size="9" fill="#333" font-weight="500">Start a Project →</text>
+
+  <!-- Row 2 -->
+  <rect x="60" y="710" width="330" height="210" rx="4" fill="#fafafa" stroke="#eee" stroke-width="1"/>
+  <text x="80" y="733" font-size="9" fill="#aaa" letter-spacing="2">03</text>
+  <rect x="80" y="743" width="40" height="2" fill="#333"/>
+  <text x="80" y="773" font-size="13" fill="#333" font-weight="600">Commercial &amp; Brand</text>
+  <rect x="80" y="785" width="280" height="10" rx="2" fill="#ddd"/>
+  <rect x="80" y="801" width="260" height="10" rx="2" fill="#ddd"/>
+  <text x="80" y="835" font-size="8" fill="#aaa">— Strategy alignment</text>
+  <text x="80" y="849" font-size="8" fill="#aaa">— Campaign production</text>
+  <text x="80" y="863" font-size="8" fill="#aaa">— Usage licensing</text>
+  <text x="80" y="897" font-size="9" fill="#333" font-weight="500">Start a Project →</text>
+
+  <rect x="410" y="710" width="330" height="210" rx="4" fill="#fafafa" stroke="#eee" stroke-width="1"/>
+  <text x="430" y="733" font-size="9" fill="#aaa" letter-spacing="2">04</text>
+  <rect x="430" y="743" width="40" height="2" fill="#333"/>
+  <text x="430" y="773" font-size="13" fill="#333" font-weight="600">Narrative &amp; Short Film</text>
+  <rect x="430" y="785" width="280" height="10" rx="2" fill="#ddd"/>
+  <rect x="430" y="801" width="260" height="10" rx="2" fill="#ddd"/>
+  <text x="430" y="835" font-size="8" fill="#aaa">— Script consultation</text>
+  <text x="430" y="849" font-size="8" fill="#aaa">— Cinematography</text>
+  <text x="430" y="863" font-size="8" fill="#aaa">— Festival DCP mastering</text>
+  <text x="430" y="897" font-size="9" fill="#333" font-weight="500">Start a Project →</text>
+
+  <!-- Row 3 -->
+  <rect x="60" y="935" width="330" height="210" rx="4" fill="#fafafa" stroke="#eee" stroke-width="1"/>
+  <text x="80" y="958" font-size="9" fill="#aaa" letter-spacing="2">05</text>
+  <rect x="80" y="968" width="40" height="2" fill="#333"/>
+  <text x="80" y="998" font-size="13" fill="#333" font-weight="600">Wedding Videography</text>
+  <rect x="80" y="1010" width="280" height="10" rx="2" fill="#ddd"/>
+  <rect x="80" y="1026" width="260" height="10" rx="2" fill="#ddd"/>
+  <text x="80" y="1060" font-size="8" fill="#aaa">— Full-day coverage</text>
+  <text x="80" y="1074" font-size="8" fill="#aaa">— Feature film edit</text>
+  <text x="80" y="1088" font-size="8" fill="#aaa">— Raw footage archive</text>
+  <text x="80" y="1122" font-size="9" fill="#333" font-weight="500">Start a Project →</text>
+
+  <rect x="410" y="935" width="330" height="210" rx="4" fill="#fafafa" stroke="#eee" stroke-width="1"/>
+  <text x="430" y="958" font-size="9" fill="#aaa" letter-spacing="2">06</text>
+  <rect x="430" y="968" width="40" height="2" fill="#333"/>
+  <text x="430" y="998" font-size="13" fill="#333" font-weight="600">Event Coverage</text>
+  <rect x="430" y="1010" width="280" height="10" rx="2" fill="#ddd"/>
+  <rect x="430" y="1026" width="260" height="10" rx="2" fill="#ddd"/>
+  <text x="430" y="1060" font-size="8" fill="#aaa">— Multi-camera production</text>
+  <text x="430" y="1074" font-size="8" fill="#aaa">— Live streaming</text>
+  <text x="430" y="1088" font-size="8" fill="#aaa">— Recap &amp; full edits</text>
+  <text x="430" y="1122" font-size="9" fill="#333" font-weight="500">Start a Project →</text>
+
+  <!-- ===== WHY STUDIO JUSTICE (dark section) ===== -->
+  <rect x="0" y="1170" width="800" height="400" fill="#1a1a1a"/>
+  <text x="60" y="1210" font-size="10" fill="#555" letter-spacing="2">WHY CHOOSE STUDIO JUSTICE</text>
+  <text x="60" y="1240" font-size="20" fill="#f5f3ef" font-weight="700">The Difference</text>
+
+  <!-- 3x2 grid -->
+  <text x="60" y="1290" font-size="9" fill="#555">01</text>
+  <text x="60" y="1306" font-size="12" fill="#ddd" font-weight="600">Intentional, Not Incidental</text>
+  <rect x="60" y="1316" width="180" height="8" rx="2" fill="#333"/>
+  <rect x="60" y="1330" width="160" height="8" rx="2" fill="#333"/>
+
+  <text x="310" y="1290" font-size="9" fill="#555">02</text>
+  <text x="310" y="1306" font-size="12" fill="#ddd" font-weight="600">Collaborative by Design</text>
+  <rect x="310" y="1316" width="180" height="8" rx="2" fill="#333"/>
+  <rect x="310" y="1330" width="160" height="8" rx="2" fill="#333"/>
+
+  <text x="560" y="1290" font-size="9" fill="#555">03</text>
+  <text x="560" y="1306" font-size="12" fill="#ddd" font-weight="600">Cinema-Level Quality</text>
+  <rect x="560" y="1316" width="180" height="8" rx="2" fill="#333"/>
+  <rect x="560" y="1330" width="160" height="8" rx="2" fill="#333"/>
+
+  <text x="60" y="1390" font-size="9" fill="#555">04</text>
+  <text x="60" y="1406" font-size="12" fill="#ddd" font-weight="600">Clear Communication</text>
+  <rect x="60" y="1416" width="180" height="8" rx="2" fill="#333"/>
+  <rect x="60" y="1430" width="160" height="8" rx="2" fill="#333"/>
+
+  <text x="310" y="1390" font-size="9" fill="#555">05</text>
+  <text x="310" y="1406" font-size="12" fill="#ddd" font-weight="600">Post-Production Expertise</text>
+  <rect x="310" y="1416" width="180" height="8" rx="2" fill="#333"/>
+  <rect x="310" y="1430" width="160" height="8" rx="2" fill="#333"/>
+
+  <text x="560" y="1390" font-size="9" fill="#555">06</text>
+  <text x="560" y="1406" font-size="12" fill="#ddd" font-weight="600">Available Worldwide</text>
+  <rect x="560" y="1416" width="180" height="8" rx="2" fill="#333"/>
+  <rect x="560" y="1430" width="160" height="8" rx="2" fill="#333"/>
+
+  <!-- ===== AUDIENCE SECTION (2-col) ===== -->
+  <rect x="0" y="1570" width="800" height="360" fill="#fff"/>
+  <text x="60" y="1610" font-size="10" fill="#bbb" letter-spacing="2">WHO I WORK WITH</text>
+  <text x="60" y="1640" class="heading" font-size="16">Made for Creators and Brands</text>
+  <text x="60" y="1660" class="heading" font-size="16">Who Refuse the Ordinary</text>
+
+  <!-- Text paragraphs left -->
+  <rect x="60" y="1680" width="380" height="10" rx="2" fill="#ddd"/>
+  <rect x="60" y="1696" width="360" height="10" rx="2" fill="#ddd"/>
+  <rect x="60" y="1712" width="370" height="10" rx="2" fill="#ddd"/>
+  <rect x="60" y="1728" width="340" height="10" rx="2" fill="#ddd"/>
+  <rect x="60" y="1752" width="380" height="10" rx="2" fill="#ddd"/>
+  <rect x="60" y="1768" width="350" height="10" rx="2" fill="#ddd"/>
+  <rect x="60" y="1784" width="360" height="10" rx="2" fill="#ddd"/>
+  <rect x="60" y="1808" width="370" height="10" rx="2" fill="#ddd"/>
+  <rect x="60" y="1824" width="320" height="10" rx="2" fill="#ddd"/>
+
+  <!-- Portrait image right -->
+  <rect x="500" y="1620" width="240" height="290" rx="4" fill="#ddd"/>
+  <text x="620" y="1770" text-anchor="middle" class="label">Portrait Image</text>
+
+  <!-- ===== FAQ SECTION ===== -->
+  <rect x="0" y="1930" width="800" height="300" fill="#fafafa"/>
+  <text x="250" y="1970" font-size="10" fill="#bbb" letter-spacing="2">COMMON QUESTIONS</text>
+  <text x="250" y="1998" class="heading" font-size="20">FAQ</text>
+
+  <!-- FAQ accordion items -->
+  <rect x="250" y="2020" width="440" height="36" rx="4" fill="#fff" stroke="#eee" stroke-width="1"/>
+  <text x="270" y="2043" font-size="11" fill="#333">How far in advance should I book?</text>
+  <text x="670" y="2043" font-size="14" fill="#aaa">+</text>
+
+  <rect x="250" y="2064" width="440" height="36" rx="4" fill="#fff" stroke="#eee" stroke-width="1"/>
+  <text x="270" y="2087" font-size="11" fill="#333">Do you travel for projects outside Arizona?</text>
+  <text x="670" y="2087" font-size="14" fill="#aaa">+</text>
+
+  <rect x="250" y="2108" width="440" height="36" rx="4" fill="#fff" stroke="#eee" stroke-width="1"/>
+  <text x="270" y="2131" font-size="11" fill="#333">How long does post-production take?</text>
+  <text x="670" y="2131" font-size="14" fill="#aaa">+</text>
+
+  <rect x="250" y="2152" width="440" height="36" rx="4" fill="#fff" stroke="#eee" stroke-width="1"/>
+  <text x="270" y="2175" font-size="11" fill="#333">What file formats do you deliver?</text>
+  <text x="670" y="2175" font-size="14" fill="#aaa">+</text>
+
+  <!-- ===== CTA SECTION ===== -->
+  <rect x="0" y="2230" width="800" height="120" fill="#1a1a1a"/>
+  <text x="400" y="2268" text-anchor="middle" font-size="10" fill="#555" letter-spacing="2">READY TO BEGIN</text>
+  <text x="400" y="2300" text-anchor="middle" font-size="20" fill="#f5f3ef" font-weight="300" font-style="italic">Let's make something worth watching.</text>
+  <!-- Buttons -->
+  <rect x="280" y="2310" width="110" height="30" rx="3" fill="#f5f3ef"/>
+  <text x="305" y="2330" font-size="9" fill="#1a1a1a" font-weight="600">Contact Hudson</text>
+  <rect x="410" y="2310" width="110" height="30" rx="3" fill="none" stroke="#f5f3ef" stroke-width="1"/>
+  <text x="420" y="2330" font-size="9" fill="#f5f3ef">Behind the Scenes</text>
+
+  <!-- ===== FOOTER ===== -->
+  <rect x="0" y="2350" width="800" height="50" fill="#111"/>
+  <rect x="340" y="2358" width="120" height="14" rx="2" fill="#222"/>
+  <text x="400" y="2388" text-anchor="middle" font-size="8" fill="#444">© 2026 Studio Justice. All rights reserved.</text>
+</svg>
