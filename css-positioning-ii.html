@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Positioning II — Poem Alignment</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            font-size: 1rem;
+            line-height: 1.8;
+            background-color: #f9f6f1;
+            color: #2c2c2c;
+            padding: 2rem;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 1.6rem;
+            margin-bottom: 2.5rem;
+            letter-spacing: 0.05em;
+        }
+
+        /* ── All sections: 50% wide ── */
+        section {
+            width: 50%;
+            background-color: #fff;
+            border: 1px solid #d8d0c4;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ── Block alignment ── */
+        /* block1: left (default — no extra margin needed) */
+
+        .block2 {
+            margin: 0 auto;          /* center */
+        }
+
+        .block3 {
+            margin-left: auto;       /* right */
+        }
+
+        .block4 {
+            margin: 0 auto;          /* center */
+        }
+
+        /* ── Paragraph alignment for blocks 1, 2, 3 ── */
+        p:nth-of-type(1) { text-align: left; }
+        p:nth-of-type(2) { text-align: center; }
+        p:nth-of-type(3) { text-align: right; }
+
+        /* ── Paragraph alignment for block 4 (descendant selector) ── */
+        .block4 p:nth-of-type(1) { text-align: right; }
+        .block4 p:nth-of-type(2) { text-align: center; }
+        .block4 p:nth-of-type(3) { text-align: left; }
+        .block4 p:nth-of-type(4) { text-align: left; }
+    </style>
+</head>
+<body>
+
+    <h1>Wandering Light — A Poem</h1>
+
+    <!-- Block 1: left-aligned -->
+    <section class="block1">
+        <p>I walked along the morning shore,<br>
+        where waves forget what came before,<br>
+        and sea glass catches early sun.</p>
+
+        <p>The tide pulled back without a word,<br>
+        no footprint held, no echo heard,<br>
+        just foam retreating, always done.</p>
+
+        <p>A pelican dove sharp and clean,<br>
+        the only witness to the scene,<br>
+        and left no shadow where he'd been.</p>
+    </section>
+
+    <!-- Block 2: center-aligned -->
+    <section class="block2">
+        <p>The desert bloomed in April rain,<br>
+        each cactus wren its own refrain,<br>
+        the red rocks warm with morning light.</p>
+
+        <p>A hawk hung still against the blue,<br>
+        that effortless and patient view,<br>
+        surveying canyons left and right.</p>
+
+        <p>The sagebrush bent, the dust rose thin,<br>
+        the world outside like world within,<br>
+        both vast, both patient, both alight.</p>
+    </section>
+
+    <!-- Block 3: right-aligned -->
+    <section class="block3">
+        <p>In autumn fields the corn stood tall,<br>
+        then leaned, then bowed, then chose to fall,<br>
+        gold upon the damp black ground.</p>
+
+        <p>The farmer walked those quiet rows,<br>
+        hands deep in pockets, thinking slow,<br>
+        grateful for the harvest found.</p>
+
+        <p>A crow called out from somewhere far,<br>
+        beneath the early evening star,<br>
+        the only voice, the only sound.</p>
+    </section>
+
+    <!-- Block 4: center-aligned, paragraphs with unique alignment -->
+    <section class="block4">
+        <p>Snow came late and stayed too long,<br>
+        pressed the pine boughs, hushed the song<br>
+        of every bird that used to call.</p>
+
+        <p>The children watched from frosted glass,<br>
+        and traced their breath as minutes passed,<br>
+        while white replaced the world of fall.</p>
+
+        <p>Then came the thaw and mud and green,<br>
+        the tulip pushing through unseen,<br>
+        the yard alive with winter's end.</p>
+
+        <p>And every year the same surprise,<br>
+        the same light caught in children's eyes,<br>
+        as seasons turn and warmth descends.</p>
+    </section>
+
+</body>
+</html>

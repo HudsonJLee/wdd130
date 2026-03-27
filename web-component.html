@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Studio Justice — Services | Flip Card Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+
+        /* ── Page base ── */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background-color: #1a1a1a;
+            font-family: 'Inter', sans-serif;
+            color: #f5f3ef;
+            min-height: 100vh;
+            padding: 4rem 2rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3.5rem;
+        }
+
+        header .eyebrow {
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(245, 243, 239, 0.4);
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        header h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 6vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: #f5f3ef;
+            line-height: 1;
+        }
+
+        header p {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: rgba(245, 243, 239, 0.5);
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+
+        /* ── Card grid ── */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* ════════════════════════════════════════════════════
+           FLIP CARD COMPONENT  (from w3schools.com/howto)
+           ════════════════════════════════════════════════════ */
+
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 320px;
+            perspective: 1000px;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.7s;
+            transform-style: preserve-3d;
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .flip-card-front {
+            background-color: #2a2a2a;
+            border: 1px solid rgba(245, 243, 239, 0.08);
+            color: #f5f3ef;
+        }
+
+        .flip-card-back {
+            background-color: #f5f3ef;
+            color: #1a1a1a;
+            transform: rotateY(180deg);
+        }
+
+        /* ── Front face content ── */
+        .flip-card-front .card-number {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: rgba(245, 243, 239, 0.3);
+            margin-bottom: 1.25rem;
+        }
+
+        .flip-card-front .card-icon {
+            font-size: 2.25rem;
+            margin-bottom: 1.25rem;
+            line-height: 1;
+        }
+
+        .flip-card-front h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            margin-bottom: 0.6rem;
+        }
+
+        .flip-card-front .card-hint {
+            font-size: 0.7rem;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(245, 243, 239, 0.3);
+            margin-top: 1.5rem;
+        }
+
+        /* ── Back face content ── */
+        .flip-card-back h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+            color: #1a1a1a;
+        }
+
+        .flip-card-back p {
+            font-size: 0.88rem;
+            line-height: 1.65;
+            color: #3d3d3d;
+            margin-bottom: 1.25rem;
+        }
+
+        .flip-card-back .card-cta {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 500;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            color: #1a1a1a;
+            border-bottom: 1px solid #1a1a1a;
+            padding-bottom: 2px;
+            text-decoration: none;
+            transition: opacity 0.2s;
+        }
+
+        .flip-card-back .card-cta:hover {
+            opacity: 0.5;
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(245, 243, 239, 0.2);
+        }
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <span class="eyebrow">What We Do</span>
+        <h1>Services</h1>
+        <p>Hover over each card to learn more about what Studio Justice offers.</p>
+    </header>
+
+    <div class="card-grid">
+
+        <!-- Card 1: Music Video -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <span class="card-number">01</span>
+                    <div class="card-icon">🎬</div>
+                    <h2>Music Video Production</h2>
+                    <span class="card-hint">Hover to learn more</span>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Music Video Production</h2>
+                    <p>From concept development through final delivery — narrative-driven visuals that amplify your sound and define your artistic identity. We handle treatment, location, color grade, and everything in between.</p>
+                    <a href="studioJUSTICE/services.html" class="card-cta">Inquire</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2: Documentary -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <span class="card-number">02</span>
+                    <div class="card-icon">🎞️</div>
+                    <h2>Documentary Filmmaking</h2>
+                    <span class="card-hint">Hover to learn more</span>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Documentary Filmmaking</h2>
+                    <p>Long-form storytelling that captures truth with cinematic intentionality. From verité style to broadcast master delivery — we craft the kind of films that change how people see the world.</p>
+                    <a href="studioJUSTICE/services.html" class="card-cta">Inquire</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3: Commercial -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <span class="card-number">03</span>
+                    <div class="card-icon">📡</div>
+                    <h2>Commercial &amp; Brand Content</h2>
+                    <span class="card-hint">Hover to learn more</span>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Commercial &amp; Brand Content</h2>
+                    <p>High-impact brand films and campaigns that convert and resonate. Strategy alignment, scripting, production, color, and usage licensing — a complete brand content solution.</p>
+                    <a href="studioJUSTICE/services.html" class="card-cta">Inquire</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 4: Narrative -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <span class="card-number">04</span>
+                    <div class="card-icon">✍️</div>
+                    <h2>Narrative &amp; Short Film</h2>
+                    <span class="card-hint">Hover to learn more</span>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Narrative &amp; Short Film</h2>
+                    <p>Character-led stories crafted with precision, tension, and visual poetry. Script consultation through festival DCP delivery — built for audiences who demand something real.</p>
+                    <a href="studioJUSTICE/services.html" class="card-cta">Inquire</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 5: Wedding -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <span class="card-number">05</span>
+                    <div class="card-icon">🤍</div>
+                    <h2>Wedding Videography</h2>
+                    <span class="card-hint">Hover to learn more</span>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Wedding Videography</h2>
+                    <p>Timeless films that honor the depth of your most important moments. Full-day coverage, cinematic edit, raw archive delivery — a film you will watch for the rest of your life.</p>
+                    <a href="studioJUSTICE/services.html" class="card-cta">Inquire</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 6: Events -->
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <span class="card-number">06</span>
+                    <div class="card-icon">🎤</div>
+                    <h2>Event Coverage</h2>
+                    <span class="card-hint">Hover to learn more</span>
+                </div>
+                <div class="flip-card-back">
+                    <h2>Event Coverage</h2>
+                    <p>Multi-camera event documentation with the visual quality of a feature film. Concerts, galas, corporate events, and live productions — covered with intention, delivered with speed.</p>
+                    <a href="studioJUSTICE/services.html" class="card-cta">Inquire</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Studio Justice &copy; 2026 &mdash; Hudson Lee &mdash; Phoenix, AZ</p>
+    </footer>
+
+</body>
+</html>
